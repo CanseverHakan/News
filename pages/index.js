@@ -1,9 +1,6 @@
 import styles from '@/styles/Home.module.css'
+import Home from '@/components/Home'
 
-export default function Home() {
-  return (
-    <>
-      
-    </>
-  )
+export default function Index() {
+  return <Home />
 }
