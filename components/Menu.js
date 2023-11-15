@@ -1,16 +1,26 @@
-import React from 'react'
-import styles from '../styles/Menu.module.css';
-import Link from 'next/link';
+import React from "react";
+import styles from "../styles/Menu.module.css";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Menu() {
   return (
     <div className={styles.header}>
-        <input></input>
+      <div className={styles.searchBox}>
+        <input type="text" name="search" placeholder="Search..." />
+        <FontAwesomeIcon
+          icon={faMagnifyingGlass}
+          onClick={() => chercher(movie)}
+          className={styles.crossIcon}
+        />
+      </div>
+
       <span className={styles.logo}>MyNews</span>
       <div className={styles.linkContainer}>
-          <span className={styles.link}>Home</span>
-          <span className={styles.link}>Favoris</span>
+        <span className={styles.link}>Home</span>
+        <span className={styles.link}>Favoris</span>
       </div>
     </div>
-  )
+  );
 }
