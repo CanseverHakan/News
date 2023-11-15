@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from '../styles/Home.module.css';
 import Menu from './Menu'
-import Articles from './Articles';
+import Article from './Article';
+import Footer from './Footer';
 
 export default function Home() {
     return (
@@ -10,15 +11,10 @@ export default function Home() {
                 <Menu></Menu>
             </div>
             <div className={styles.container}>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
-                <Articles></Articles>
+                <Article></Article>
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     )
