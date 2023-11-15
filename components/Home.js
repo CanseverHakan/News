@@ -1,11 +1,13 @@
-import React from 'react'
-import Menu from './Menu'
-import styles from '../styles/Home.module.css';
+import React from "react";
+import Menu from "./Menu";
+import Footer from "./Footer";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
-    return (
-        <div>
-            <Menu></Menu>
-        </div>
-    )
+  return (
+    <div>
+      <Menu></Menu>
+      <Footer />
+    </div>
+  );
 }

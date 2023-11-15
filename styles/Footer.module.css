@@ -1,0 +1,10 @@
+.footer{
+    background-color: red;
+    width:100 vh;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+}
+.copyRight{
+    color:white;
+}
