@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@600&family=Roboto+Serif:opsz,wght@8..144,300&display=swap');
+
+/*font-family: 'Roboto Serif', serif;*/
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 400px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.titles {
+	font-family: 'Roboto Serif', serif;
+	margin-left: 10px;
+
+}
+
+.titles:hover {
+	text-decoration: underline;
+}
+
+.author {
+	font-family: 'Roboto Serif', serif;
+	margin-left: 10px;
+}
+
+.description {
+	font-family: 'Roboto Serif', serif;
+	margin-left: 10px;
+}
