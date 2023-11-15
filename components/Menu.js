@@ -18,8 +18,12 @@ export default function Menu() {
 
       <span className={styles.logo}>MyNews</span>
       <div className={styles.linkContainer}>
+        <Link href="/">
         <span className={styles.link}>Home</span>
-        <span className={styles.link}>Favoris</span>
+        </Link>
+        <Link href="/favorit">
+        <span className={styles.link}>Favorit</span>
+        </Link>
       </div>
     </div>
   );

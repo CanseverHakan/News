@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Articles() {
     const [news, setNews] = useState([])
+    const [isFavClicked, setIsFavClicked] = useState(Array(news.length).fill(false))
 
     useEffect(() => {
         fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=38aced7e6f6f46a18780b861502e6892')
@@ -14,7 +15,15 @@ export default function Articles() {
                 console.log(data)
             })
     }, [])
-    
+
+
+    const handleLikeClick = (index) => {
+        setIsFavClicked((favClicked) => {
+            const newIsFavClicked = [...favClicked]
+            newIsFavClicked[index] = !newIsFavClicked[index]
+            return newIsFavClicked
+        })
+    }
 
     return (
         <div className={styles.cardContainer}>
@@ -28,10 +37,14 @@ export default function Articles() {
                     <p className={styles.description}>{article.description}</p>
                     <div className={styles.cardBot}>
                         <span>{new Date(article.publishedAt).toUTCString()}</span>
-                        <FontAwesomeIcon icon={faBookmark}/>
+                        <FontAwesomeIcon
+                            icon={faBookmark}
+                            onClick={() => handleLikeClick(index)}
+                            style={isFavClicked[index] ? { color: 'red' } : {}}
+                        />
                     </div>
                 </div>
             ))}
         </div>
-    )
+    );
 }
