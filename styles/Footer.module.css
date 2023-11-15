@@ -1,9 +1,12 @@
 .footer{
-    background-color: red;
-    width:100 vh;
-    height: 200px;
-    justify-content: center;
-    text-align: center;
+        background-color: red;
+        width: 100vw; 
+        height: 200px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        bottom: 0;
 }
 .copyRight{
     color:white;

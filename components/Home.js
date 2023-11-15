@@ -5,6 +5,8 @@ import Article from './Article';
 import Footer from './Footer';
 
 export default function Home() {
+
+
     return (
         <div className={styles.main}>
             <div>

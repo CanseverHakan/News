@@ -2,6 +2,16 @@
 
 /*font-family: 'Roboto Serif', serif;*/
 
+.cardContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.image {
+	width: 400px;
+	height: 200px;
+}
 .card {
 	display: flex;
 	flex-direction: column;
@@ -29,5 +39,9 @@
 
 .description {
 	font-family: 'Roboto Serif', serif;
+	margin-left: 10px;
+}
+
+.cardBot {
 	margin-left: 10px;
 }
