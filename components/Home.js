@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { listNews } from "@/reducers/news";
 
 export default function Home() {
-
   return (
     <div className={styles.main}>
       <div>
@@ -21,5 +20,4 @@ export default function Home() {
       </div>
     </div>
   );
-
 }

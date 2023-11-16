@@ -21,7 +21,14 @@ export default function Articles() {
             })
     }, [dispatch])
 
-
+  const handleLikeClick = (index) => {
+    setIsFavClicked((favClicked) => {
+      const newIsFavClicked = [...favClicked];
+      newIsFavClicked[index] = !newIsFavClicked[index];
+      return newIsFavClicked;
+    });
+  };
+  
     const handleLikeClick = (article) => {
         dispatch(favorite(article))
         dispatch(selectArticle(article))
@@ -53,3 +60,4 @@ export default function Articles() {
         </div>
     )
 }
+

@@ -11,13 +11,13 @@ export const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
+
     listNews: (state, action) => {
       state.newsList = action.payload
     },
     favorite: (state, action) => {
       const article = action.payload
       const index = state.favorites.findIndex((fav) => fav.title === article.title)
-
       if (index) {
         state.favorites.push(article)
       } else {
@@ -33,3 +33,4 @@ export const newsSlice = createSlice({
 
 export const { listNews, favorite, selectArticle } = newsSlice.actions
 export default newsSlice.reducer
+
