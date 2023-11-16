@@ -2,15 +2,17 @@
 
 /*font-family: 'Roboto Serif', serif;*/
 
+
 .cardContainer {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin: 60px;
 }
 
 .image {
 	width: 400px;
-	height: 200px;
+	height: 250px;
 }
 .card {
 	display: flex;
@@ -18,7 +20,7 @@
 	justify-content: flex-start;
 	width: 400px;
 	margin: 10px;
-	background-color: white;
+	background-color: rgb(188, 186, 186);
 	border-radius: 10px;
 }
 
@@ -28,7 +30,7 @@
 
 }
 
-.title:hover {
+.titles:hover {
 	text-decoration: underline;
 }
 
@@ -44,13 +46,5 @@
 
 .cardBot {
 	margin-left: 10px;
-	margin-right: 150px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	bottom: 0;
 }
 
-.url {
-	margin-left: 10px;
-}

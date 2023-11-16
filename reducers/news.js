@@ -1,8 +1,10 @@
-import React from "react";
-import { createSlice } from "@reduxjs/toolkit";
+import React from "react"
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-  value: [],
+  newsList: [],
+  favorites: [],
+  selectedArticle: null
 };
 
 export const newsSlice = createSlice({
@@ -10,10 +12,24 @@ export const newsSlice = createSlice({
   initialState,
   reducers: {
     listNews: (state, action) => {
-      state.value.push(action.payload);
+      state.newsList = action.payload
     },
-  },
-});
+    favorite: (state, action) => {
+      const article = action.payload
+      const index = state.favorites.findIndex((fav) => fav.title === article.title)
 
-export const { listNews } = newsSlice.actions;
-export default newsSlice.reducer;
+      if (index) {
+        state.favorites.push(article)
+      } else {
+        state.favorites.splice(index, 1)
+      }
+    },
+    selectArticle: (state, action) => {
+      state.selectedArticle = action.payload;
+    }
+  }
+})
+
+
+export const { listNews, favorite, selectArticle } = newsSlice.actions
+export default newsSlice.reducer

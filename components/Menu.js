@@ -21,8 +21,8 @@ export default function Menu() {
         <Link href="/">
         <span className={styles.link}>Home</span>
         </Link>
-        <Link href="/favorit">
-        <span className={styles.link}>Favorit</span>
+        <Link href="/favorite">
+        <span className={styles.link}>Favorite</span>
         </Link>
       </div>
     </div>
