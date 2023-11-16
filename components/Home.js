@@ -10,6 +10,7 @@ import { listNews } from "@/reducers/news";
 export default function Home() {
   const dispatch = useDispatch();
   const news = useSelector((state) => state.news.value);
+
   console.log(news);
 
   return (
@@ -25,5 +26,4 @@ export default function Home() {
       </div>
     </div>
   );
-
 }
