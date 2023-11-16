@@ -20,14 +20,6 @@ export default function Articles() {
                 console.log(data)
             })
     }, [dispatch])
-
-  const handleLikeClick = (index) => {
-    setIsFavClicked((favClicked) => {
-      const newIsFavClicked = [...favClicked];
-      newIsFavClicked[index] = !newIsFavClicked[index];
-      return newIsFavClicked;
-    });
-  };
   
     const handleLikeClick = (article) => {
         dispatch(favorite(article))
