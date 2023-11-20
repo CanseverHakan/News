@@ -1,11 +1,11 @@
-import React from 'react'
-import Menu from './Menu'
-import Footer from './Footer'
-import { useSelector } from 'react-redux'
-import styles from '../styles/Favorite.module.css'
+import React from 'react';
+import Menu from './Menu';
+import Footer from './Footer';
+import { useSelector } from 'react-redux';
+import styles from '../styles/Favorite.module.css';
 
 export default function Favorit() {
-  const selectedArticle = useSelector((state) => state.news.selectedArticle)
+  const favorites = useSelector((state) => state.news.favorites)
 
   return (
     <div className={styles.main}>
@@ -13,23 +13,23 @@ export default function Favorit() {
         <Menu />
       </div>
       <div className={styles.container}>
-        {selectedArticle && (
-          <div className={styles.cardContainer}>
+        {favorites.map((favorite, index) => (
+          <div key={favorite.title} className={styles.cardContainer}>
             <div className={styles.card}>
-              <img className={styles.image} src={selectedArticle.urlToImage} alt={selectedArticle.title} />
+              <img className={styles.image} src={favorite.urlToImage} alt={favorite.title} />
               <div>
-                <h3 className={styles.title}>{selectedArticle.title}</h3>
+                <h3 className={styles.title}>{favorite.title}</h3>
               </div>
               <span className={styles.author}>
-                <strong>{selectedArticle.author}</strong> from {selectedArticle.source.name}
+                <strong>{favorite.author}</strong> from {favorite.source.name}
               </span>
-              <p className={styles.description}>{selectedArticle.description}</p>
+              <p className={styles.description}>{favorite.description}</p>
               <div className={styles.cardBot}>
-                <span>{new Date(selectedArticle.publishedAt).toUTCString()}</span>
+                <span>{new Date(favorite.publishedAt).toUTCString()}</span>
               </div>
             </div>
           </div>
-        )}
+        ))}
       </div>
       <div>
         <Footer />
