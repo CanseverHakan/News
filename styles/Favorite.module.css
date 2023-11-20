@@ -3,24 +3,25 @@
 /*font-family: 'Roboto Serif', serif;*/
 
 
-.cardContainer {
+.container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 60px;
+	margin: 40px;
 }
 
 .image {
 	width: 400px;
 	height: 250px;
 }
+
 .card {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 400px;
 	margin: 10px;
-	background-color: rgb(188, 186, 186);
+	background-color: rgb(243, 241, 241);
 	border-radius: 10px;
 }
 

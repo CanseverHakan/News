@@ -42,7 +42,7 @@ export default function Articles() {
     }
 
     return (
-        <div>
+        <div className={styles.main}>
             <input
                 className={styles.searchBar}
                 type="text"

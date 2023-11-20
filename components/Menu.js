@@ -6,7 +6,7 @@ export default function Menu() {
 
   return (
     <div className={styles.header}>
-      <span className={styles.logo}>MyNews</span>
+      <h1 className={styles.logo}>MyNews</h1>
       <div className={styles.linkContainer}>
         <Link href="/" className={styles.homeLink}>
           <span className={styles.link}>Home</span>
