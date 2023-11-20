@@ -38,14 +38,21 @@
 .author {
 	font-family: 'Roboto Serif', serif;
 	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .description {
 	font-family: 'Roboto Serif', serif;
 	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .cardBot {
 	margin-left: 10px;
+	margin-right: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 10px;
 }
 
